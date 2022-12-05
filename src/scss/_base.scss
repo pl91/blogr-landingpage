@@ -2,10 +2,14 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  list-style: none;
 }
 
 
@@ -14,18 +18,27 @@ html {
     font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
 }
 
+body {
+  overflow-x: clip;
+}
+
 img {
     max-width: 100%;
     display: block;
   }
 
-a {
-    text-decoration: none;
-}
+  a {
+    color: inherit;
+  }
 
 // GRID CONTAINER
 .container {
     display: grid;
-    grid-template-rows: repeat(4, min-content);
-    grid-template-columns: [full-start] .95fr [middle-start] repeat(6, 1fr) [middle-end] .95fr [full-end];
+    grid-template-rows: repeat(3, max-content) repeat(2, 1fr);
+    grid-template-columns: [full-start] var(--grid-edge) [middle-start] repeat(6, 1fr) [middle-end] var(--grid-edge) [full-end];
+}
+
+.container-section {
+    display: grid;
+    grid-template-columns: [full-start] var(--grid-edge) [middle-start] repeat(6, 1fr) [middle-end] var(--grid-edge) [full-end];
 }

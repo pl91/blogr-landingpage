@@ -1,34 +1,48 @@
 // GLOBAL VARIABLES
 :root {
-    --color-blue-1: #666CA3;
-    --color-blue-2: #13183F;
+    // primary colors
+    --color-red-400: rgb(255, 82, 93);
+    --color-red-300: rgb(255, 122, 133);
 
-    --color-pink-1: #FFA7C3;
-    --color-pink-2: #F74780;
+    --color-blue-400: rgb(31, 63, 90);
+    --color-blue-500: rgb(37, 37, 45);
 
-    --color-grey: #83869A;
-    --color-white: #FFF;
+    --color-white:  rgb(255, 255, 255);
+    --color-grey-400: rgb(200, 200, 203);
+    --color-grey-500: rgb(76, 88, 98);
+    
+    // fonts
+    --font-primary: 'Ubuntu', sans-serif;
+    --font-secondary: 'Overpass', sans-serif;
+
+    // grid
+    --grid-edge: .9fr;
 }
 
 // MIXINS
 @mixin gradient-primary {
-    background-image: linear-gradient(180deg, rgba(255, 111, 72, 1),rgba(240, 42, 166, 1));
-}
-
-@mixin gradient-primary-hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+     background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
 }
 
 @mixin gradient-secondary {
-    background-image: linear-gradient(180deg, rgba(77,81,255,1), rgba(240, 42, 166, 1));   
+    background: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
 }
 
-@mixin gradient-secondary-hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+@mixin text {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        min-width: 54rem;
+        max-width: 65rem;
+}
+
+@mixin text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
 }
 
 // UTILITY CLASS 
-
 .pt-sm {margin-top: 1rem;}
 .pt-md {margin-top: 2rem;}
 .pt-lg {margin-top: 3rem;}

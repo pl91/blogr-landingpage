@@ -1,0 +1,45 @@
+.info-1 {
+    background-color: var(--color-white);
+
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+    z-index: 10;
+    color: var(--color-blue-400);
+    padding-bottom: 5.7rem; 
+
+    &__content {
+        grid-column: middle-start / full-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -15rem;
+        gap: 8rem;
+    }
+
+    &__heading {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-top: 15rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        min-width: 54rem;
+        max-width: 65rem;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 3.4rem;
+    }
+
+    &__image-box {
+        min-width: max-content;
+        margin-right: -12vw;
+        margin-right: -5vw;
+    }
+}

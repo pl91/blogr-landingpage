@@ -1,0 +1,56 @@
+.info-2 {
+    grid-column: full-start / full-end;
+
+    @include gradient-secondary;
+    color: var(--color-white);
+    justify-content: space-between;
+    align-content: center;
+    max-height: 40rem;
+    position: relative;
+    border-radius: 0 100px 0 0;
+
+
+
+    &__content {
+    grid-column: middle-start / middle-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    position: relative;
+    z-index: 100;
+    }
+
+    &__image-box {
+        margin-left: -4rem;
+        margin-bottom: -3rem;
+    }
+
+    &__image {
+        min-height: 55rem;
+        min-width: 52rem;
+    }
+
+    &__text {
+        min-width: 54rem;
+        max-width: 65rem;
+    }
+
+    &__heading {
+        white-space: nowrap;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__bg-image-box {
+            position: absolute;
+            z-index: 1;
+            min-width: max-content;
+            bottom: -10rem;
+            left: -24rem;
+    }
+}

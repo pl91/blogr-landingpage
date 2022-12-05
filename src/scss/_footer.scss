@@ -1,0 +1,8 @@
+.footer {
+    height: 200px;
+    background-color: salmon;
+
+    grid-column: full-start / full-end;
+
+    z-index: 10;
+}

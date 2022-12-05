@@ -1,0 +1,40 @@
+.info-3 {
+    background-color: var(--color-white);
+    
+    
+    grid-column: full-start / full-end;
+
+    z-index: 10;
+    color: var(--color-blue-400);
+    padding-bottom: 5.7rem;
+    padding-top: 11.6rem; 
+
+    &__content {
+        grid-column: full-start / middle-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8rem;
+        margin-left: -28rem;
+    }
+
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        min-width: 54rem;
+        max-width: 65rem;
+        margin-left: -5rem;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 3.4rem;
+    }
+
+    &__image-box {
+        min-width: max-content;
+    }
+}

@@ -1,8 +1,53 @@
 //GLOBAL 
 body {
-    font-family: sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+
+.heading {
+  font-family: var(--font-secondary);
+
+  &--primary {
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 9.8rem;
+    letter-spacing: -1.92px;
+  }
+
+  &--secondary {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 6.1rem;
+    letter-spacing: -1.2px;
+  }
+
+  &--tertiary {
+    font-size: 2.8rem;
     line-height: 2.8rem;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.1rem;
+  }
+}
+
+.body {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: 2.8rem;
+  letter-spacing: .5px;
+
+  &--dark {
+    color: var(--color-grey-500);
+  }
+
+  &--light {
+    color: var(--color-white);
+  }
 }
 
 // BUTTONS
@@ -13,17 +58,32 @@ body {
       display: inline-block;
       text-transform: capitalize;
       text-decoration: none;
-      padding: 1.4rem 3.2rem;
-      border-radius: 2.8rem;
+      border-radius: 10rem;
       transition: all 0.2s;
       position: relative;
+      font-family: inherit;
       font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: .5px;  
-      color: white; 
-      border: none;
-      cursor: pointer;
+      font-weight: 700;
+      text-align: center;
+      line-height: inherit; 
       white-space: nowrap;
+      min-width: 13.7rem;
+      
+    }
+
+    &--primary {
+      color: var(--color-red-400);
+      background-color: var(--color-white);
+      padding: 1.5rem 1.6rem;
+      
+    }
+
+    &--secondary {
+      border: 1px solid var(--color-white);
+      padding: 1.5rem 2.4rem;
+    }
+
+    &--link {
+      min-width: auto;
     }
 }
