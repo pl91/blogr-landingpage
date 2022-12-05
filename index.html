@@ -18,9 +18,15 @@
           <img src="/logo.4bcd4013.svg" alt="Blogr logo">
         </a>
         <ul class="nav__links">
-          <a href="#"><li class="btn btn--link">Product</li></a>
-          <a href="#"><li class="btn btn--link">Company</li></a>
-          <a href="#"><li class="btn btn--link">Connect</li></a>
+          <a href="#"><li class="btn btn--link nav__link">
+              Product
+              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
+          <a href="#"><li class="btn btn--link nav__link">
+              Company
+              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
+          <a href="#"><li class="btn btn--link nav__link">
+              Connect
+              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
         </ul>
         <div class="nav__cta">
           <a href="#" class="btn btn--link">Login</a>
@@ -32,8 +38,10 @@
         <h4 class="heading heading--sub">
           Grow your audience and build your online brand
         </h4>
-        <a href="#" class="btn btn--primary">Start for free</a>
-        <a href="#" class="btn btn--secondary">Learn More</a>
+        <div class="hero__cta">
+          <a href="#" class="btn btn--primary">Start for free</a>
+          <a href="#" class="btn btn--secondary">Learn More</a>
+        </div>
       </div>
       <div class="header__bg-image-box">
         <picture class="header__bg-image">
@@ -85,19 +93,26 @@
     <!-- info-2  start -->
     <section class="info-2 container-section">
       <div class="info-2__content">
-      <div class="info-2__image-box">
-        <img src="/illustration-phones.803ef2f5.svg" class="info-2__image" alt="Illustration phones">
-      </div>
-      <div class="info-2__text">
-        <div class="info-2__text-block">
-          <h2 class="heading--secondary info-2__heading">State of the Art Infrastructure</h2>
-          <p class="body body--light">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        <div class="info-2__image-box">
+          <img src="/illustration-phones.803ef2f5.svg" class="info-2__image" alt="Illustration phones">
+        </div>
+        <div class="info-2__text">
+          <div class="info-2__text-block">
+            <h2 class="heading--secondary info-2__heading">
+              State of the Art Infrastructure
+            </h2>
+            <p class="body body--light">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="info-2__bg-image-box">
-      <img src="/bg-pattern-circles.8aa0bf30.svg" alt="bg pattern circles" class="info-2__img">
-    </div>
+      <div class="info-2__bg-image-box">
+        <img src="/bg-pattern-circles.8aa0bf30.svg" alt="bg pattern circles" class="info-2__img">
+      </div>
     </section>
     <!-- info-2 end -->
 
@@ -105,35 +120,73 @@
     <section class="info-3 container-section">
       <div class="info-3__content">
         <div class="info-3__image-box">
-        <picture class="info-3__image">
-          <source media="(min-width: 100px)" srcset="/illustration-laptop-desktop.bddd8634.svg">
-          <img src="/illustration-laptop-mobile.129fa567.svg" alt="Laptop image">
-        </picture>
-      </div>
+          <picture class="info-3__image">
+            <source media="(min-width: 100px)" srcset="/illustration-laptop-desktop.bddd8634.svg">
+            <img src="/illustration-laptop-mobile.129fa567.svg" alt="Laptop image">
+          </picture>
+        </div>
         <div class="info-3__text">
           <div class="info-3__text-block">
-            <h3 class="heading--tertiary">
-              Free, open, simple
-            </h3>
+            <h3 class="heading--tertiary">Free, open, simple</h3>
             <div class="body body-dark">
-              Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
             </div>
             <div class="info-3__text-block">
-              <h3 class="heading--tertiary">
-                Powerful tooling
-              </h3>
+              <h3 class="heading--tertiary">Powerful tooling</h3>
               <div class="body body-dark">
-                Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
               </div>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
     <!-- info-3 end -->
 
     <!-- footer start -->
-    <!-- <footer class="footer">footer</footer> -->
+    <footer class="footer container-section">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">
+          <img src="/logo.4bcd4013.svg" alt="Blogr logo">
+        </a>
+        <nav class="footer__nav">
+          <div class="footer__nav-section">
+            <h4 class="footer__nav-heading">Product</h4>
+            <ul class="footer__nav-links">
+              <a href="#"><li class="footer__nav-link">Overview</li></a>
+              <a href="#"><li class="footer__nav-link">Pricing</li></a>
+              <a href="#"><li class="footer__nav-link">Marketplace</li></a>
+              <a href="#"><li class="footer__nav-link">Features</li></a>
+              <a href="#"><li class="footer__nav-link">Integrations</li></a>
+            </ul>
+          </div>
+          <div class="footer__nav-section">
+            <h4 class="footer__nav-heading">Company</h4>
+            <ul class="footer__nav-links">
+              <a href="#"><li class="footer__nav-link">About</li></a>
+              <a href="#"><li class="footer__nav-link">Team</li></a>
+              <a href="#"><li class="footer__nav-link">Blog</li></a>
+              <a href="#"><li class="footer__nav-link">Careers</li></a>
+            </ul>
+          </div>
+          <div class="footer__nav-section">
+            <h4 class="footer__nav-heading">Connect</h4>
+            <ul class="footer__nav-links">
+              <a href="#"><li class="footer__nav-link">Contact</li></a>
+              <a href="#"><li class="footer__nav-link">Newsletter</li></a>
+              <a href="#"><li class="footer__nav-link">Linkedin</li></a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
     <!-- footer end -->
 
     <script src="/index.579125c3.js"></script>
