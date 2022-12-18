@@ -10,6 +10,10 @@
     padding-bottom: 25rem;
   }
 
+  @media only screen and (max-width: $bp-xs) {
+    padding-bottom: 20rem;
+  }
+
   &__content {
     grid-column: middle-start / full-end;
     display: flex;
@@ -71,8 +75,12 @@
 
     @media only screen and (max-width: $bp-m) {
       order: 1;
-      min-width: 0;
+      min-width: max-content;
       margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+      min-width: fit-content;
     }
   }
 }

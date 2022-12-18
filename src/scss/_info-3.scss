@@ -8,6 +8,10 @@
   padding-bottom: 11.6rem;
   padding-top: 11.6rem;
 
+  @media only screen and (max-width: $bp-m) {
+   padding-top: 7.9rem;
+  }
+
   &__content {
     grid-column: full-start / middle-end;
     display: flex;
@@ -19,6 +23,7 @@
     @media only screen and (max-width: $bp-m) {
       grid-column: middle-start / middle-end;
       flex-direction: column;
+      gap: 4.6rem;
       margin: 0;
     }
   }
@@ -58,7 +63,11 @@
 
     @media only screen and (max-width: $bp-m) {
       order: 1;
-      min-width: 0;
+      min-width: max-content;
+    }
+
+    @media only screen and (max-width: $bp-xs) {
+      min-width: fit-content;
     }
   }
 }
