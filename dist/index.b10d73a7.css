@@ -645,6 +645,7 @@ a {
 }
 
 .info-2__image-box {
+  z-index: 20;
   margin-bottom: -3rem;
   margin-left: -4rem;
 }

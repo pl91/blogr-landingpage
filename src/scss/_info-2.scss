@@ -52,6 +52,7 @@
   &__image-box {
     margin-left: -4rem;
     margin-bottom: -3rem;
+    z-index: 20;
 
     @media only screen and (max-width: $bp-m) {
       margin: 0;
@@ -65,6 +66,7 @@
   &__image {
     min-height: 55rem;
     min-width: 52rem;
+    
 
     @media only screen and (max-width: $bp-xl) {
       min-width: auto;
