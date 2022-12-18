@@ -27,7 +27,6 @@
   justify-content: space-between;
   align-content: center;
   max-height: 40rem;
-  position: relative;
   border-radius: 0 100px 0 0;
 
   @media only screen and (max-width: $bp-m) {
@@ -40,8 +39,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 8rem;
-    position: relative;
-    z-index: 100;
+
 
     @media only screen and (max-width: $bp-m) {
       flex-direction: column;
@@ -81,7 +79,7 @@
     }
 
     @media only screen and (max-width: $bp-xs) {
-      max-width: 23rem;
+      max-width: 22rem;
     }
   }
 

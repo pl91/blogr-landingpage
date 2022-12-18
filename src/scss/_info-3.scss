@@ -3,10 +3,10 @@
 
   grid-column: full-start / full-end;
 
-  z-index: 10;
   color: var(--color-blue-400);
   padding-bottom: 11.6rem;
   padding-top: 11.6rem;
+  overflow-x: hidden;
 
   @media only screen and (max-width: $bp-m) {
    padding-top: 7.9rem;
@@ -67,7 +67,8 @@
     }
 
     @media only screen and (max-width: $bp-xs) {
-      min-width: fit-content;
+      order: 1;
+      min-width: auto;
     }
   }
 }

@@ -1,6 +1,7 @@
 .info-1 {
   background-color: var(--color-white);
 
+
   grid-column: full-start / full-end;
   grid-row: 2 / 3;
   color: var(--color-blue-400);
@@ -21,6 +22,7 @@
     align-items: center;
     margin-top: -15rem;
     gap: 8rem;
+    overflow-x: clip;
 
     @media only screen and (max-width: $bp-xl) {
       margin-top: 4rem;
@@ -80,7 +82,7 @@
     }
 
     @media only screen and (max-width: $bp-xs) {
-      min-width: fit-content;
+      min-width: auto;
     }
   }
 }
