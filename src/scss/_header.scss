@@ -1,79 +1,241 @@
-.header {  
-    grid-column: full-start / full-end;
+.header {
+  grid-column: full-start / full-end;
+  height: 60rem;
 
-    @include gradient-primary;
-    
-    color: var(--color-white);
-    border-radius: 0 0 0 100px;
+  @include gradient-primary;
+  background-position-x: 25%;
+  background-position-y: 52%;
+  background-repeat: no-repeat;
 
-   
+  @media only screen and (max-width: $bp-xl) {
+    background-position-x: 36%;
+    background-position-y: 32%;
+  }
 
+  color: var(--color-white);
+  border-radius: 0 0 0 100px;
+  overflow-y: clip;
+
+  .logo {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    transform: translateY(6.5rem);
+    min-width: 10.6rem;
+    height: fit-content;
+    margin-bottom: 12rem;
+  }
+
+  .nav {
+    grid-column: 3 / middle-end;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 1fr max-content;
+    margin-top: 6.3rem;
+
+    height: 4.55rem;
+
+    @media only screen and (max-width: $bp-m) {
+      gap: 0;
+    }
+
+    &__links {
+      grid-column: 2 / 4;
+
+      display: flex;
+      align-items: center;
+      gap: 3.2rem;
+
+      @media only screen and (max-width: $bp-m) {
+        display: none;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+      position: relative;
+
+      &:focus > .nav__icon {
+        transform: rotate(180deg);
+      }
+
+      &:focus + .nav__dropdown {
+        display: block;
+      }
+    }
+
+    &__icon {
+      transition: all 0.2s;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      transition: all 2s;
+      margin-top: 2.7rem;
+      background-color: var(--color-white);
+      color: var(--color-blue-600);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+      border-radius: 5px;
+      z-index: 20;
+    }
+
+    &__dropdown-content {
+      padding: 2.4rem;
+      padding-right: 6.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &__dropdown-item {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 3.3rem;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    &__cta {
+      grid-column: 8/9;
+
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      @media only screen and (max-width: $bp-m) {
+        display: none;
+      }
+    }
+  }
+
+  .hero {
+    grid-row: 2 / 3;
+    grid-column: middle-start / middle-end;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-m) {
+      margin-bottom: 0;
+      transform: translateY(1rem);
+    }
+
+    &__cta {
+      display: flex;
+      justify-content: center;
+      gap: 1.6rem;
+      margin-top: 4.8rem;
+    }
+  }
+
+  ////////// MOBILE MENU
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+
+
+    @media only screen and (max-width: $bp-m) {
+      grid-column: 7 / 8;
+      grid-row: 1 / 2;
+      display: block;
+      justify-self: end;
+      transform: translateY(8rem);
+      height: fit-content;
+    }
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 5%;
+    top: 7rem;
+    min-width: 90vw;
+    height: auto;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    border-radius: 5px;
+    padding: 2.4rem 0;
+
+    @media only screen and (min-width: $bp-m) {
+      display: none;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: -5.6rem;
+      right: 0.4rem;
+    }
+
+    & ~ .hero {
+      visibility: hidden;
+      opacity: 0;
+    }
 
     .nav {
-        grid-column: middle-start / middle-end;
+      &__links {
+        display: block;
+        color: var(--color-blue-400);
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+      }
 
-        display: grid;
-        align-items: center;
-        grid-template-columns: max-content 1fr max-content;
-        column-gap: 6%;
-        margin-top: 6.3rem;
-        margin-bottom: 12rem;
-        z-index: 10;
-        
-        &__links {
-            grid-column: 2 / 4;
+      &__link {
+        justify-content: center;
+      }
 
-            display: flex;
-            gap: 3.2rem;
+      &__dropdown {
+        display: none;
+        position: relative;
+        background-color: var(--color-blue-600--light);
+        color: var(--color-blue-400);
+        box-shadow: none;
+        min-width: 80vw;
+        z-index: 20;
+
+      }
+  
+      &__dropdown-content {
+        padding: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+  
+      &__dropdown-item {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 3.3rem;
+  
+        &:hover {
+          font-weight: 700;
+        }
+      }
+
+      &__cta {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--color-blue-600--light);
+        padding-top: 2.4rem;
+
+        .link {
+          color: var(--color-blue-400);
         }
 
-        &__link {
-            display: flex;
-            align-items: baseline;
-            gap: .8rem;
-
-            &:hover > .nav__icon {
-                transform: rotate(180deg);
-            }
+        .btn {
+          background: linear-gradient(135deg, #ff8f71 0%, #ff3e55 100%);
+          color: var(--color-white);
         }
-
-        &__icon {
-            transition: all .2s;
-        }
-
-        &__cta {
-            grid-column: 8/9;
-
-            display: flex;
-            align-items: center;
-            gap: 2rem;  
-        }
+      }      
     }
+  }
 
-    .hero {
-        grid-row: 2 / 3;
-        grid-column: middle-start / middle-end;
-        justify-self: center;
-        text-align: center;
-
-        margin-bottom: 15.5rem;
-        z-index: 10;
-
-        &__cta {
-            margin-top: 4.8rem;
-        }
-    }
-
-    &__bg-image-box {
-        position: absolute;
-        z-index: 1;
-        min-width: max-content;
-        top: -132rem;
-        left: -42rem;
-    }
-}
-
-.nav__icon {
-    color: blue;
-    // width: 20rem;
 }

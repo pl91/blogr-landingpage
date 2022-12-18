@@ -13,10 +13,19 @@
         gap: 3rem;
         margin-top: 7rem;
         margin-bottom: 7rem;
+
+        @media only screen and (max-width: $bp-s) {
+            flex-direction: column;
+            align-items: center;
+          }
     }
 
     &__logo {
         height: min-content;
+
+        @media only screen and (max-width: $bp-s) {
+            margin-bottom: 3rem;
+          }
     }
 
     &__nav {
@@ -28,6 +37,16 @@
         flex-grow: 2;
         justify-content: center;
         gap: 15vw;
+
+        @media only screen and (max-width: $bp-m) {
+            gap: 10vw;
+          }
+
+        @media only screen and (max-width: $bp-xs) {
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+          }
     }
 
     &__nav-heading {

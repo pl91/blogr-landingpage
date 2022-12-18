@@ -1,45 +1,78 @@
 .info-1 {
-    background-color: var(--color-white);
+  background-color: var(--color-white);
 
-    grid-column: full-start / full-end;
-    grid-row: 2 / 3;
-    z-index: 10;
-    color: var(--color-blue-400);
-    padding-bottom: 5.7rem; 
+  grid-column: full-start / full-end;
+  grid-row: 2 / 3;
+  color: var(--color-blue-400);
+  padding-bottom: 5.7rem;
 
-    &__content {
-        grid-column: middle-start / full-end;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: -15rem;
-        gap: 8rem;
+  @media only screen and (max-width: $bp-m) {
+    padding-bottom: 25rem;
+  }
+
+  &__content {
+    grid-column: middle-start / full-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15rem;
+    gap: 8rem;
+
+    @media only screen and (max-width: $bp-xl) {
+      margin-top: 4rem;
     }
 
-    &__heading {
-        grid-row: 1 / 2;
-        grid-column: 1 / -1;
-        justify-self: center;
-        margin-top: 15rem;
+    @media only screen and (max-width: $bp-m) {
+      grid-column: middle-start / middle-end;
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 15rem;
+
+    @media only screen and (max-width: $bp-xl) {
+      margin-top: 10rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    @include text-width;
+
+    @media only screen and (max-width: $bp-m) {
+      order: 2;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+  }
+
+  &__image-box {
+    min-width: max-content;
+    margin-right: -12vw;
+    margin-right: -5vw;
+
+    @media only screen and (max-width: $bp-xl) {
+      min-width: 60rem;
     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        gap: 6.4rem;
-        min-width: 54rem;
-        max-width: 65rem;
+    @media only screen and (max-width: $bp-l) {
+      min-width: 50rem;
     }
 
-    &__text-block {
-        display: flex;
-        flex-direction: column;
-        gap: 3.4rem;
+    @media only screen and (max-width: $bp-m) {
+      order: 1;
+      min-width: 0;
+      margin: 0;
     }
-
-    &__image-box {
-        min-width: max-content;
-        margin-right: -12vw;
-        margin-right: -5vw;
-    }
+  }
 }

@@ -10,29 +10,87 @@
     <link rel="stylesheet" href="/index.b10d73a7.css">
     <title>Blogr</title>
   </head>
-  <body class="container">
+
+  <body class="container" onresize="reSize()">
     <!-- header start -->
     <header class="header container-section">
+      <a href="#" class="logo">
+        <img src="/logo.4bcd4013.svg" alt="Blogr logo">
+      </a>
+
+      <!-- "Hamburger menu" to toggle the navigation links -->
+      <a class="menu-icon" onclick="mobileMenu()">
+        <img src="/icon-hamburger.9b6ee044.svg" alt="mobile menu icon">
+      </a>
+    
       <nav class="nav">
-        <a href="#" class="nav__logo">
-          <img src="/logo.4bcd4013.svg" alt="Blogr logo">
-        </a>
-        <ul class="nav__links">
-          <a href="#"><li class="btn btn--link nav__link">
-              Product
-              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
-          <a href="#"><li class="btn btn--link nav__link">
-              Company
-              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
-          <a href="#"><li class="btn btn--link nav__link">
-              Connect
-              <img src="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon"></li></a>
-        </ul>
-        <div class="nav__cta">
-          <a href="#" class="btn btn--link">Login</a>
-          <a href="#" class="btn btn--primary">Sign up</a>
-        </div>
+          <ul class="nav__links">
+            <!-- Products -->
+            <li>
+              <a href="#" class="link nav__link">
+                Product
+                <picture>
+                  <source media="(min-width: 801px)" srcset="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon">
+                  <img src="/icon-arrow-dark.eb108045.svg" class="nav__icon">
+                </picture>
+              </a>
+              <ul class="nav__dropdown">
+                <div class="nav__dropdown-content">
+                  <li class="nav__dropdown-item"><a href="#">Overview</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Pricing</a></li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Marketplace</a>
+                  </li>
+                  <li class="nav__dropdown-item"><a href="#">Features</a></li>
+                  <li class="nav__dropdown-item">
+                    <a href="#">Integrations</a>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <!-- Company -->
+            <li>
+              <a href="#" class="link nav__link">
+                Company
+                <picture>
+                  <source media="(min-width: 801px)" srcset="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon">
+                  <img src="/icon-arrow-dark.eb108045.svg" class="nav__icon">
+                </picture>
+              </a>
+              <ul class="nav__dropdown">
+                <div class="nav__dropdown-content">
+                  <li class="nav__dropdown-item"><a href="#">About</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Team</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Blog</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Careers</a></li>
+                </div>
+              </ul>
+            </li>
+            <!-- Connect -->
+            <li>
+              <a href="#" class="link nav__link">
+                Connect
+                <picture>
+                  <source media="(min-width: 801px)" srcset="/icon-arrow-light.d14a650f.svg" alt="icon-arrow" class="nav__icon">
+                  <img src="/icon-arrow-dark.eb108045.svg" class="nav__icon">
+                </picture>
+              </a>
+              <ul class="nav__dropdown">
+                <div class="nav__dropdown-content">
+                  <li class="nav__dropdown-item"><a href="#">Contact</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Newsletter</a></li>
+                  <li class="nav__dropdown-item"><a href="#">Linkdin</a></li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          <!-- Nav cta -->
+          <div class="nav__cta">
+            <a href="#" class="link">Login</a>
+            <a href="#" class="btn btn--primary">Sign up</a>
+          </div>
       </nav>
+      <!-- Hero -->
       <div class="hero">
         <h1 class="heading heading--primary">A modern publishing platform</h1>
         <h4 class="heading heading--sub">
@@ -42,14 +100,7 @@
           <a href="#" class="btn btn--primary">Start for free</a>
           <a href="#" class="btn btn--secondary">Learn More</a>
         </div>
-      </div>
-      <div class="header__bg-image-box">
-        <picture class="header__bg-image">
-          <source media="(min-width: 801px)" srcset="/bg-pattern-intro-desktop.afc25d4c.svg">
-          <img src="/bg-pattern-intro-mobile.a796679d.svg" alt="Background image">
-        </picture>
-      </div>
-    </header>
+    </div></header>
     <!-- header end -->
 
     <!-- info-1  start -->
@@ -82,7 +133,7 @@
         </div>
         <div class="info-1__image-box">
           <picture class="info-1__image">
-            <source media="(min-width: 100px)" srcset="/illustration-editor-desktop.74ee91a3.svg">
+            <source media="(min-width: 801px)" srcset="/illustration-editor-desktop.74ee91a3.svg">
             <img src="/illustration-editor-mobile.24904260.svg" alt="Desktop image">
           </picture>
         </div>
@@ -110,9 +161,6 @@
           </div>
         </div>
       </div>
-      <div class="info-2__bg-image-box">
-        <img src="/bg-pattern-circles.8aa0bf30.svg" alt="bg pattern circles" class="info-2__img">
-      </div>
     </section>
     <!-- info-2 end -->
 
@@ -121,7 +169,7 @@
       <div class="info-3__content">
         <div class="info-3__image-box">
           <picture class="info-3__image">
-            <source media="(min-width: 100px)" srcset="/illustration-laptop-desktop.bddd8634.svg">
+            <source media="(min-width: 801px)" srcset="/illustration-laptop-desktop.bddd8634.svg">
             <img src="/illustration-laptop-mobile.129fa567.svg" alt="Laptop image">
           </picture>
         </div>
@@ -136,13 +184,13 @@
               Analytics. The architecture is clean and is relatively easy to
               learn.
             </div>
-            <div class="info-3__text-block">
-              <h3 class="heading--tertiary">Powerful tooling</h3>
-              <div class="body body-dark">
-                Batteries included. We built a simple and straightforward CLI
-                tool that makes customization and deployment a breeze, but
-                capable of producing even the most complicated sites.
-              </div>
+          </div>
+          <div class="info-3__text-block">
+            <h3 class="heading--tertiary">Powerful tooling</h3>
+            <div class="body body-dark">
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
             </div>
           </div>
         </div>
@@ -160,28 +208,52 @@
           <div class="footer__nav-section">
             <h4 class="footer__nav-heading">Product</h4>
             <ul class="footer__nav-links">
-              <a href="#"><li class="footer__nav-link">Overview</li></a>
-              <a href="#"><li class="footer__nav-link">Pricing</li></a>
-              <a href="#"><li class="footer__nav-link">Marketplace</li></a>
-              <a href="#"><li class="footer__nav-link">Features</li></a>
-              <a href="#"><li class="footer__nav-link">Integrations</li></a>
+              <li>
+                <a href="#" class="footer__nav-link">Overview</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Marketplace</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Features</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Integrations</a>
+              </li>
             </ul>
           </div>
           <div class="footer__nav-section">
             <h4 class="footer__nav-heading">Company</h4>
             <ul class="footer__nav-links">
-              <a href="#"><li class="footer__nav-link">About</li></a>
-              <a href="#"><li class="footer__nav-link">Team</li></a>
-              <a href="#"><li class="footer__nav-link">Blog</li></a>
-              <a href="#"><li class="footer__nav-link">Careers</li></a>
+              <li>
+                <a href="#" class="footer__nav-link">About</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Team</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Careers</a>
+              </li>
             </ul>
           </div>
           <div class="footer__nav-section">
             <h4 class="footer__nav-heading">Connect</h4>
             <ul class="footer__nav-links">
-              <a href="#"><li class="footer__nav-link">Contact</li></a>
-              <a href="#"><li class="footer__nav-link">Newsletter</li></a>
-              <a href="#"><li class="footer__nav-link">Linkedin</li></a>
+              <li>
+                <a href="#" class="footer__nav-link">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Newsletter</a>
+              </li>
+              <li>
+                <a href="#" class="footer__nav-link">Linkedin</a>
+              </li>
             </ul>
           </div>
         </nav>

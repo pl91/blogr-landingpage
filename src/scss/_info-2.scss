@@ -1,17 +1,35 @@
 .info-2 {
-    grid-column: full-start / full-end;
+  grid-column: full-start / full-end;
 
-    @include gradient-secondary;
-    color: var(--color-white);
-    justify-content: space-between;
-    align-content: center;
-    max-height: 40rem;
-    position: relative;
-    border-radius: 0 100px 0 0;
+  @include gradient-secondary;
+  background-position-x: -55%;
+  background-position-y: 85%;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: $bp-m) {
+    background-position-x: 60%;
+    background-position-y: 120%;
+  }
+
+  @media only screen and (max-width: $bp-s) {
+    background-position-x: 50%;
+    background-position-y: 140%;
+  }
+  
 
 
+  color: var(--color-white);
+  justify-content: space-between;
+  align-content: center;
+  max-height: 40rem;
+  position: relative;
+  border-radius: 0 100px 0 0;
 
-    &__content {
+  @media only screen and (max-width: $bp-m) {
+    max-height: fit-content;
+  }
+
+  &__content {
     grid-column: middle-start / middle-end;
     display: flex;
     align-items: center;
@@ -19,38 +37,61 @@
     gap: 8rem;
     position: relative;
     z-index: 100;
+
+    @media only screen and (max-width: $bp-m) {
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: -16rem;
+      padding-bottom: 11rem;
+    }
+  }
+
+  &__image-box {
+    margin-left: -4rem;
+    margin-bottom: -3rem;
+
+    @media only screen and (max-width: $bp-m) {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    min-height: 55rem;
+    min-width: 52rem;
+
+    @media only screen and (max-width: $bp-xl) {
+      min-width: auto;
+      min-height: auto;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
     }
 
-    &__image-box {
-        margin-left: -4rem;
-        margin-bottom: -3rem;
+    @media only screen and (max-width: $bp-m) {
+      max-width: 33rem;
+      margin: 0;
     }
 
-    &__image {
-        min-height: 55rem;
-        min-width: 52rem;
+    @media only screen and (max-width: $bp-xs) {
+      max-width: 23rem;
     }
+  }
 
-    &__text {
-        min-width: 54rem;
-        max-width: 65rem;
-    }
+  &__text {
+    @include text-width;
+  }
 
-    &__heading {
-        white-space: nowrap;
-    }
+  &__heading {
+    white-space: nowrap;
 
-    &__text-block {
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
+    @media only screen and (max-width: $bp-m) {
+      white-space: normal;
+      text-align: center;
     }
+  }
 
-    &__bg-image-box {
-            position: absolute;
-            z-index: 1;
-            min-width: max-content;
-            bottom: -10rem;
-            left: -24rem;
-    }
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
