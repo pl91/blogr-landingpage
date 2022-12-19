@@ -200,10 +200,6 @@ html {
   }
 }
 
-body {
-  overflow-x: hidden;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -216,7 +212,6 @@ a {
 .container {
   grid-template-rows: repeat(5, minmax(25rem, max-content));
   grid-template-columns: [full-start] var(--grid-edge) [middle-start] repeat(6, 1fr) [middle-end] var(--grid-edge) [full-end];
-  min-width: 100vw;
   display: grid;
 }
 
@@ -238,7 +233,6 @@ a {
   background-clip: border-box, border-box;
   border-radius: 0 0 0 100px;
   grid-column: full-start / full-end;
-  overflow-y: clip;
 }
 
 @media only screen and (max-width: 81.25em) {
@@ -385,16 +379,17 @@ a {
     grid-area: 1 / 7 / 2 / 8;
     justify-self: end;
     display: block;
-    transform: translateY(8rem);
+    transform: translateY(7.8rem);
   }
 }
 
 .header .mobile-menu {
   background-color: var(--color-white);
-  min-width: 90vw;
+  min-width: 90%;
   height: auto;
   border-radius: 5px;
   flex-direction: column;
+  justify-content: center;
   gap: 2.4rem;
   padding: 2.4rem 0;
   display: flex;
