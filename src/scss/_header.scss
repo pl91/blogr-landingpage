@@ -14,7 +14,6 @@
 
   color: var(--color-white);
   border-radius: 0 0 0 100px;
-  overflow-y: clip;
 
   .logo {
     grid-row: 1 / 2;
@@ -145,7 +144,7 @@
       grid-row: 1 / 2;
       display: block;
       justify-self: end;
-      transform: translateY(8rem);
+      transform: translateY(7.8rem);
       height: fit-content;
     }
   }
@@ -153,12 +152,13 @@
   .mobile-menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2.4rem;
     background-color: var(--color-white);
     position: absolute;
     left: 5%;
     top: 7rem;
-    min-width: 90vw;
+    min-width: 90%;
     height: auto;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
     border-radius: 5px;
