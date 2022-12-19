@@ -149,6 +149,7 @@ body {
   color: var(--color-red-400);
   background-color: var(--color-white);
   padding: 1.5rem 1.6rem;
+  min-width: 13.7rem;
 }
 
 .btn--primary:hover {
